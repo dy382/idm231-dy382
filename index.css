@@ -1,3 +1,40 @@
 .Methods {
     margin: 5em;
 }
+
+
+body {
+    background-color: #ECECE7;
+    color: #36454F;
+}
+
+* {
+box-sizing: border-box;
+background-color: #ECECE7;
+
+}
+
+.Methods {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline   ;
+    text
+}
+
+.Methods p {
+    display: none;
+}
+
+.button {
+    background-color: transparent;
+
+    border: none;
+}
+
+.button img {
+    height: 9em;
+
+    &:hover { cursor: pointer; background-image: lighten(10%);
+    }
+}

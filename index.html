@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="index.css">
     <script defer src="./index.js"></script>
     <title>Birthday Brew</title>
     <style>
@@ -24,69 +24,77 @@
     <p id="zodiacSign"></p>
 
   <div class='Methods'>
-    <button onclick="capricorn"><img src="images/name.png"><p>Cold Brew Maker</p></button>
-    <button onclick="aquarius"><img src="images/name.png"><p>Pour Over Dripper</p></button>
-    <button onclick="pisces"><img src="images/name.png"><p>French Press</p></button>
-    <button onclick="aries"><img src="images/name.png"><p>Aeropress</p></button>
-    <button onclick="taurus"><img src="images/name.png"><p>8-Cup Coffee Maker</p></button>
-    <button onclick="gemini"><img src="images/name.png"><p>Combination Espresso Machine</p></button>
-    <button onclick="cancer"><img src="images/name.png"><p>Moka Pot</p></button>
-    <button onclick="leo"><img src="images/name.png"><p>Single-Serve Espresso Maker</p></button>
-    <button onclick="virgo"><img src="images/name.png"><p>Coffee Siphon</p></button>
-    <button onclick="libra"><img src="images/name.png"><p>Chemex</p></button>
-    <button onclick="scorpio"><img src="images/name.png"><p>La Marzocco Linea Mini</p></button>
-    <button onclick="sagittarius"><img src="images/name.png"><p>Portable Espresso Maker</p></button>
+    <button id="capricorn" class="button"><img src="images/drop.png"><p>Cold Brew Maker</p></button>
+    <button id="aquarius" class="button"><img src="idm231-images/PourOverDrip.png"><p>Pour Over Dripper</p></button>
+    <button id="pisces" class="button"><img src="idm231-images/FrenchPress.PNG"><p>French Press</p></button>
+    <button id="aries" class="button"><img src="idm231-images/Aeropress.PNG"><p>Aeropress</p></button>
+    <button id="taurus" class="button"><img src="images/name.png"><p>8-Cup Coffee Maker</p></button>
+    <button id="gemini" class="button"><img src="images/name.png"><p>Combination Espresso Machine</p></button>
+    <button id="cancer" class="button"><img src="idm231-images/MokaPot.PNG"><p>Moka Pot</p></button>
+    <button id="leo" class="button"><img src="images/name.png"><p>Single-Serve Espresso Maker</p></button>
+    <button id="virgo" class="button"><img src="idm231-images/Siphon.PNG"><p>Coffee Siphon</p></button>
+    <button id="libra" class="button"><img src="idm231-images/Chemex.PNG"><p>Chemex</p></button>
+    <button id="scorpio" class="button"><img src="images/name.png"><p>La Marzocco Linea Mini</p></button>
+    <button id="sagittarius" class="button"><img src="images/name.png"><p>Portable Espresso Maker</p></button>
 </div>
 
-<script>
+  <script>
     function calculateZodiac() {
         const month = parseInt(document.getElementById('birthMonth').value);
         const day = parseInt(document.getElementById('birthDate').value);
         const zodiacSign = getZodiacSign(month, day);
-        document.getElementById('zodiacSign').textContent = `Your zodiac sign is: ${zodiacSign}`;
+        document.getElementById('zodiacSign').textContent = `You are: ${zodiacSign}`;
     }
 
-    function getZodiacSign(month, day) {
-        let zodiacSigns = [
-            "Capricorn",
-            "Aquarius",
-            "Pisces",
-            "Aries",
-            "Taurus",
-            "Gemini",
-            "Cancer",
-            "Leo",
-            "Virgo",
-            "Libra",
-            "Scorpio",
-            "Sagittarius",
-            "Capricorn" // Capricorn again for December 22 - December 31
-        ];
+        function getZodiacSign(month, day) {
+  if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
+      let zodiacSign = "Capricorn";
+      Method = "Cold Brew Maker ";
+  }
+  } 
 
-        const cutoffDates = [
-            20, // January
-            19, // February
-            20, // March
-            20, // April
-            21, // May
-            21, // June
-            22, // July
-            23, // August
-            23, // September
-            23, // October
-            22, // November
-            21  // December
-        ];
+/* 
+  function getZodiacSign(month, day) {
+    let zodiacSigns = [
+        "Capricorn",
+        "Aquarius",
+        "Pisces",
+        "Aries",
+        "Taurus",
+        "Gemini",
+        "Cancer",
+        "Leo",
+        "Virgo",
+        "Libra",
+        "Scorpio",
+        "Sagittarius",
+        "Capricorn" // Capricorn again for December 22 - December 31
+    ];
+    
+    const cutoffDates = [
+        20, // January
+        19, // February
+        20, // March
+        20, // April
+        21, // May
+        21, // June
+        22, // July
+        23, // August
+        23, // September
+        23, // October
+        22, // November
+        21  // December
+    ];
 
-        // Adjust for JavaScript's 0-indexed months
-        month--;
+    // Adjust for JavaScript's 0-indexed months
+    month--;
 
-        if (day <= cutoffDates[month]) {
-            return zodiacSigns[month];
-        } else {
-            return zodiacSigns[(month + 1) % 12];
-        }
-    }
+    if (day <= cutoffDates[month]) {
+        return zodiacSigns[month];
+    } else {
+        return zodiacSigns[(month + 1) % 12];
+    }    }*/
+ 
   </script>
 </body>
 </html>
