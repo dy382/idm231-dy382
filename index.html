@@ -14,44 +14,106 @@
     </style>
 </head>
 <body>
+  <div class="words">
   <h1>Birthday Brew</h1>
     <h2>Enter your birth date and month</h2>
-    <label for="birthMonth">Month:</label>
-    <input type="number" id="birthMonth" min="1" max="12">
-    <label for="birthDate">Date:</label>
-    <input type="number" id="birthDate" min="1" max="31">
+    <label for="birthMonth">Month: <input type="number" id="birthMonth" min="1" max="12"> </label>
+
+    <label for="birthDate">Date: <input type="number" id="birthDate" min="1" max="31"> </label>
+
     <button onclick="calculateZodiac()">Calculate Zodiac Sign</button>
     <p id="zodiacSign"></p>
+  </div>
 
-  <div class='Methods'>
-    <button id="capricorn" class="button"><img src="images/drop.png"><p>Cold Brew Maker</p></button>
-    <button id="aquarius" class="button"><img src="idm231-images/PourOverDrip.png"><p>Pour Over Dripper</p></button>
+  <div class='box'></div>
+  
+  
+    <div class='Methods'>
+    <button id="aquarius" class="button"><img src="idm231-images/PourOverDrip.png"><p>Pour Over Drip</p></button>
     <button id="pisces" class="button"><img src="idm231-images/FrenchPress.PNG"><p>French Press</p></button>
     <button id="aries" class="button"><img src="idm231-images/Aeropress.PNG"><p>Aeropress</p></button>
-    <button id="taurus" class="button"><img src="images/name.png"><p>8-Cup Coffee Maker</p></button>
-    <button id="gemini" class="button"><img src="images/name.png"><p>Combination Espresso Machine</p></button>
+    <button id="taurus" class="button"><img src="idm231-images/"><p>Coffee Maker</p></button>
+    <button id="gemini" class="button"><img src="idm231-images/espresso.png"><p>Espresso Machine</p></button>
     <button id="cancer" class="button"><img src="idm231-images/MokaPot.PNG"><p>Moka Pot</p></button>
-    <button id="leo" class="button"><img src="images/name.png"><p>Single-Serve Espresso Maker</p></button>
-    <button id="virgo" class="button"><img src="idm231-images/Siphon.PNG"><p>Coffee Siphon</p></button>
+    <button id="leo" class="button"><img src="idm231-images/percolator.png"><p>Percolator</p></button>
+    <button id="virgo" class="button"><img src="idm231-images/Siphon.PNG"><p>Siphon</p></button>
     <button id="libra" class="button"><img src="idm231-images/Chemex.PNG"><p>Chemex</p></button>
-    <button id="scorpio" class="button"><img src="images/name.png"><p>La Marzocco Linea Mini</p></button>
-    <button id="sagittarius" class="button"><img src="images/name.png"><p>Portable Espresso Maker</p></button>
+    <button id="scorpio" class="button"><img src="idm231-images/vietnamese.png"><p>Vietnamese Coffee</p></button>
+    <button id="capricorn" class="button"><img src="idm231-images/coldbrew.png"><p>Cold Brew</p></button>
 </div>
 
-  <script>
-    function calculateZodiac() {
-        const month = parseInt(document.getElementById('birthMonth').value);
-        const day = parseInt(document.getElementById('birthDate').value);
-        const zodiacSign = getZodiacSign(month, day);
-        document.getElementById('zodiacSign').textContent = `You are: ${zodiacSign}`;
-    }
+<script>
+  
+  function calculateZodiac() {
+      const month = parseInt(document.getElementById('birthMonth').value);
+      const day = parseInt(document.getElementById('birthDate').value);
+      const zodiacSign = getZodiacSign(month, day);
+      document.getElementById('zodiacSign').textContent = `You are: ${zodiacSign}`;
+   }
 
-        function getZodiacSign(month, day) {
-  if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
-      let zodiacSign = "Capricorn";
-      Method = "Cold Brew Maker ";
+  function getZodiacSign(month, day) {
+if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
+    zodiacSigns = "Aquarius";
+    Method = "Pour Over";
+    return zodiacSigns + " " + Method;
+}
+else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
+    let zodiacSigns = "Pisces";
+    Method = "French Press";
+    return zodiacSigns + " " + Method;
+}
+else if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
+    let zodiacSigns = "Aries";
+    Method = "Aeropress";
+    return zodiacSigns + " " + Method;
+}
+else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
+    let zodiacSigns = "Taurus";
+    Method = "Es";
+    return zodiacSigns + " " + Method;
+}
+else if ((month == 5 && day >= 21) || (month == 6 && day <= 21)) {
+    let zodiacSigns = "Gemini";
+    Method = "Espresso";
+    return zodiacSigns + " " + Method;
+} 
+else if ((month == 6 && day >= 22) || (month == 7 && day <= 22)) {
+    let zodiacSigns = "Cancer";
+    Method = "Espresso";
+    return zodiacSigns + " " + Method;
+} 
+else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
+    let zodiacSigns = "Leo";
+    Method = "Espresso";
+    return zodiacSigns + " " + Method;
+} 
+else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
+    let zodiacSigns = "Virgo";
+    Method = "Espresso";
+    return zodiacSigns + " " + Method;
+} 
+else if ((month == 9 && day >= 23) || (month == 10 && day <= 23)) {
+    let zodiacSigns = "Libra";
+    Method = "Espresso";
+    return zodiacSigns + " " + Method;
+} 
+else if ((month === 10 && day >= 24) || (month === 11 && day <= 21)) {
+    let zodiacSigns = "Scorpio";
+    Method = "Espresso";
+    return zodiacSigns + " " + Method;
+} 
+else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
+    let zodiacSigns = "Sagiattarius";
+    Method = "Espresso";
+    return zodiacSigns + " " + Method;
+} 
+else if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
+    let zodiacSigns = "Capricorn";
+    Method = "Pour Over";
+    return zodiacSigns + " " + Method;
+}
   }
-  } 
+
 
 /* 
   function getZodiacSign(month, day) {
