@@ -1,22 +1,42 @@
-<script>
-  
+function display(show) {
+    const original = document.getElementsByClassName('Methods');
+    const exhibit = document.getElementsById('testAnswers');
+
+    if (show === 'original') {
+        original.style.display = 'block';
+        exhibit.style.display = 'none';
+    } else if (show === '') {
+        original.style.display = 'none';
+        exhibit.style.display = 'block';
+        getZodiacSign();
+    }
+}
+
+document.getElementById('back').addEventListener('click', function() {
+    display('original');
+  });
+
   function calculateZodiac() {
       const month = parseInt(document.getElementById('birthMonth').value);
       const day = parseInt(document.getElementById('birthDate').value);
       const zodiacSign = getZodiacSign(month, day);
-      document.getElementById('zodiacSign').textContent = `You are: ${zodiacSign}`;
    }
 
   function getZodiacSign(month, day) {
+    const Answer = document.getElementbyID('answer')
+    const Description = document.getElementById('description')
+
 if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
     zodiacSigns = "Aquarius";
     Method = "Pour Over";
-    return zodiacSigns + " " + Method;
+    Answer.textContent = `You are: ${zodiacSigns}`;
+    Description.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 }
 else if ((month === 2 && day >= 19) || (month === 3 && day <= 20)) {
     let zodiacSigns = "Pisces";
     Method = "French Press";
-    return zodiacSigns + " " + Method;
+    Answer.textContent = `You are: ${zodiacSigns}`;
+    Description.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 }
 else if ((month === 3 && day >= 21) || (month === 4 && day <= 19)) {
     let zodiacSigns = "Aries";
@@ -70,94 +90,70 @@ else if ((month === 12 && day >= 22) || (month === 1 && day <= 19)) {
 }
   }
 
-
+let chalkboard = document.getElementById('words');
+let soundEffect = document.getElementById("sound");
 
   function zodiacSigns(Result) {
-    console.log('swap zod info called ' + Result);
 
 if (Result == Aquarius) {
-    heroObj.src = 'images/cap_hero.png';
-    playSomething('audio/jon_audio.mp3');
-} else if (Result == 2) {
-    heroObj.src = 'images/ari_hero.png';
-    playSomething('audio/danny_audio.mp3');
-} else if (whichOne == 3) {
-    heroObj.src = 'images/sco_hero.png';
-    playSomething('audio/arya_audio.mp3');
-} else if (whichOne == 4) {
-    heroObj.src = 'images/sag_hero.png';
-    playSomething('audio/yigritte_audio.mp3');
-} else if (whichOne == 5) {
-    heroObj.src = 'images/aqu_hero.png';
-    playSomething('audio/bran_audio.mp3');
-} else if (whichOne == 6) {
-    heroObj.src = 'images/pis_hero.png';
-    playSomething('audio/hodor_audio.mp3');
-} else if (whichOne == 7) {
-    heroObj.src = 'images/tau_hero.png';
-    playSomething('audio/jamie_audio.mp3');
-} else if (whichOne == 8) {
-    heroObj.src = 'images/gem_hero.png';
-    playSomething('audio/sansa_audio.mp3');
-} else if (whichOne == 9) {
-    heroObj.src = 'images/can_hero.png';
-    playSomething('audio/circi_audio.mp3');
-} else if (whichOne == 10) {
-    heroObj.src = 'images/lib_hero.png';
-    playSomething('audio/bronn_audio.mp3');
-} else if (whichOne == 11) {
-    heroObj.src = 'images/leo_hero.png';
-    playSomething('audio/tyrion_audio.mp3');
-} else if (whichOne == 12) {
-    heroObj.src = 'images/vir_hero.png';
-    playSomething('audio/brienne_audio.mp3');
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Pisces) {
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Aries) {
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Taurus) {
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Gemini) {
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Cancer) {
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Leo) {
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Virgo) {
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Libra) {
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Scorpio) {
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Sagiattarius) {
+    chalkwriting();
+   playAudio('audio/');
+
+} else if (Result == Capricorn) {
+    chalkwriting();
+   playAudio('audio/');
 
 } else {
     console.log('error in swapzodinfo');
 }
 
+
   }
 
-/* 
-  function getZodiacSign(month, day) {
-    let zodiacSigns = [
-        "Capricorn",
-        "Aquarius",
-        "Pisces",
-        "Aries",
-        "Taurus",
-        "Gemini",
-        "Cancer",
-        "Leo",
-        "Virgo",
-        "Libra",
-        "Scorpio",
-        "Sagittarius",
-        "Capricorn" // Capricorn again for December 22 - December 31
-    ];
-    
-    const cutoffDates = [
-        20, // January
-        19, // February
-        20, // March
-        20, // April
-        21, // May
-        21, // June
-        22, // July
-        23, // August
-        23, // September
-        23, // October
-        22, // November
-        21  // December
-    ];
 
-    // Adjust for JavaScript's 0-indexed months
-    month--;
+function playAudio(audioFile) {
+    soundEffect.src = audioFile;
+    soundEffect.play();
 
-    if (day <= cutoffDates[month]) {
-        return zodiacSigns[month];
-    } else {
-        return zodiacSigns[(month + 1) % 12];
-    }    }*/
- 
-  </script>
+    console.log('play' + audioFile);
+}
