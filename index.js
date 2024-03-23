@@ -1,18 +1,20 @@
 function display(show) {
-    const original = document.getElementsByClassName('Methods');
-    const exhibit = document.getElementsById('testAnswers');
+    const original = document.getElementById('Methods');
+    const exhibit = document.getElementById('testAnswers');
 
     if (show === 'original') {
         original.style.display = 'block';
         exhibit.style.display = 'none';
+        console.log('test original')
     } else if (show === '') {
         original.style.display = 'none';
         exhibit.style.display = 'block';
         getZodiacSign();
+        console.log('test else')
     }
 }
 
-document.getElementById('back').addEventListener('click', function() {
+document.querySelector('.back').addEventListener('click', function() {
     display('original');
   });
 
@@ -20,11 +22,14 @@ document.getElementById('back').addEventListener('click', function() {
       const month = parseInt(document.getElementById('birthMonth').value);
       const day = parseInt(document.getElementById('birthDate').value);
       const zodiacSign = getZodiacSign(month, day);
+      display('');
    }
 
   function getZodiacSign(month, day) {
-    const Answer = document.getElementbyId('answer')
+    const Answer = document.getElementById('answer')
     const Description = document.getElementById('description')
+    let zodiacSigns = ""; // Declare zodiacSigns variable
+    let Method = ""; // Declare Method variable
 
 if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
     zodiacSigns = "Aquarius";
