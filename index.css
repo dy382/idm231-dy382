@@ -119,17 +119,13 @@ box-sizing: border-box;
     border: none;
 }
 
-.button p {
-    display: none;
-}
-
 .button img {
     height: 120px;
     padding: 0 10px;
 }
 .button img:hover {
     cursor: pointer;
-    background-image: lighten(10%);
+    background-color: lighten(10%);
 
 }
 
@@ -185,7 +181,7 @@ box-sizing: border-box;
 }
 
 #image {
-    height: 400px;
+    height: 500px;
     width: auto;
 }
 
@@ -193,8 +189,4 @@ box-sizing: border-box;
 text-align: center;
 width: 50vw;
     padding: 0rem 1rem 0 5rem;
-}
-
-#image {
-    
 }
