@@ -30,7 +30,7 @@ box-sizing: border-box;
     position: fixed;
     top: 75px;
     left: 50%;
-    box-shadow: 0 -5% 2px #31343a;
+    box-shadow: 0 2px #31343a;
 }
 
 .words h1 {
@@ -126,9 +126,10 @@ box-sizing: border-box;
 .button img {
     height: 120px;
     padding: 0 10px;
-
-    &:hover { cursor: pointer; background-image: lighten(10%);
-    }
+}
+.button img:hover {
+    cursor: pointer;
+    background-image: lighten(10%);
 
 }
 
