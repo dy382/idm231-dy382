@@ -28,37 +28,41 @@
 
 
 <div class="methodparents">
-<div class='Methods' id="Methods">
+<div class='Methods' id="Methods" style="display: block;">
   <div class='box1'></div>
   <div class='box2'></div>
   <div class='box3'></div>
 
   <div class="shelf1">
-    <button id="aquarius" class="button"><img src="idm231-images/PourOverDrip.png"><p>Pour Over Drip</p></button>
-    <button id="pisces" class="button"><img src="idm231-images/FrenchPress.PNG"><p>French Press</p></button>
-    <button id="aries" class="button"><img src="idm231-images/Aeropress.PNG"><p>Aeropress</p></button>
-    <button id="capricorn" class="button"><img src="idm231-images/coldbrew.png"><p>Cold Brew</p></button>
+    <button id="aquarius" class="button" onclick="calculateZodiac(1, 25)"><img src="idm231-images/PourOverDrip.png"><p>Pour Over Drip</p></button>
+    <button id="pisces" class="button" onclick="calculateZodiac(2, 20)"><img src="idm231-images/FrenchPress.PNG"><p>French Press</p></button>
+    <button id="aries" class="button" onclick="calculateZodiac(3, 25)"><img src="idm231-images/Aeropress.PNG"><p>Aeropress</p></button>
+    <button id="capricorn" class="button" onclick="calculateZodiac(12, 25)"><img src="idm231-images/coldbrew.png"><p>Cold Brew</p></button>
   </div>
 
   <div class="shelf2">
-    <button id="taurus" class="button"><img src="idm231-images/machinedrip.png"><p>Coffee Maker</p></button>
-    <button id="gemini" class="button"><img src="idm231-images/espresso.png"><p>Espresso Machine</p></button>
-    <button id="cancer" class="button"><img src="idm231-images/MokaPot.PNG"><p>Moka Pot</p></button>
-    <button id="leo" class="button"><img src="idm231-images/percolator.png"><p>Percolator</p></button>
+    <button id="taurus" class="button" onclick="calculateZodiac(4, 25)"><img src="idm231-images/machinedrip.png"><p>Coffee Maker</p></button>
+    <button id="gemini" class="button" onclick="calculateZodiac(5, 25)"><img src="idm231-images/espresso.png"><p>Espresso Machine</p></button>
+    <button id="cancer" class="button" onclick="calculateZodiac(6, 25)"><img src="idm231-images/MokaPot.PNG"><p>Moka Pot</p></button>
+    <button id="leo" class="button" onclick="calculateZodiac(7, 25)"><img src="idm231-images/percolator.png"><p>Percolator</p></button>
   </div>
 
   <div class="shelf3"> 
-    <button id="virgo" class="button"><img src="idm231-images/Siphon.PNG"><p>Siphon</p></button>
-    <button id="libra" class="button"><img src="idm231-images/Chemex.PNG"><p>Chemex</p></button>
-    <button id="scorpio" class="button"><img src="idm231-images/vietnamese.png"><p>Vietnamese Coffee</p></button>
-    <button id="sagittarius" class="button"><img src="idm231-images/turkish.png"><p>Cold Brew</p></button>
+    <button id="virgo" class="button" onclick="calculateZodiac(8, 25)"><img src="idm231-images/Siphon.PNG"><p>Siphon</p></button>
+    <button id="libra" class="button" onclick="calculateZodiac(9, 25)"><img src="idm231-images/Chemex.PNG"><p>Chemex</p></button>
+    <button id="scorpio" class="button" onclick="calculateZodiac(10, 25)"><img src="idm231-images/vietnamese.png"><p>Vietnamese Coffee</p></button>
+    <button id="sagittarius" class="button" onclick="calculateZodiac(11, 25)"><img src="idm231-images/turkish.png"><p>Cold Brew</p></button>
   </div>  
   </div>
 
-  <div id="testAnswers">
-    <h2 id="answer"></h2>
+  <div id="testAnswers" style="display: none;">
+
+    <div class="content">
+    <div id="image"></div>
     <p id="description"></p>
-    <button class="back">back</button>
+  </div>
+
+    <button class="back"><img src="idm231-images/back-button.svg" alt="Back"></button>
   </div>
 
 </div>

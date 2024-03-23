@@ -1,7 +1,15 @@
+@font-face {
+    font-family: 'Overpass Mono';
+      src: url('../fonts/overpass_mono/overpass-mono-light-webfont.woff') format('woff'),
+            url('../fonts/overpass_mono/overpass-mono-light-webfont.woff2') format('woff2');
+    font-weight: 300;
+  }
+
 body {
 
     color: #36454F;
     background-color: #ECECE7;
+    font-family: 'Overpass Mono';
     /* background-image: url("idm231-images/brick-wall-painted-white.jpg");
     background-size: 50%; */
 }
@@ -124,6 +132,27 @@ box-sizing: border-box;
 
 }
 
+.back img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+}
+
+.back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+}
+
+.back:hover {
+    opacity: 0.7;
+}
+
 #helpButton img {
     width: 100%; 
     height: 100%; 
@@ -152,4 +181,19 @@ box-sizing: border-box;
     bottom: 20px;
     right: 150px;
     z-index: 999;
+}
+
+#image {
+    height: 400px;
+    width: auto;
+}
+
+ .content {
+text-align: center;
+width: 50vw;
+    padding: 0rem 1rem 0 5rem;
+}
+
+#image {
+    
 }
