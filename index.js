@@ -23,7 +23,7 @@ document.getElementById('back').addEventListener('click', function() {
    }
 
   function getZodiacSign(month, day) {
-    const Answer = document.getElementbyID('answer')
+    const Answer = document.getElementbyId('answer')
     const Description = document.getElementById('description')
 
 if ((month === 1 && day >= 20) || (month === 2 && day <= 18)) {
@@ -79,7 +79,7 @@ else if ((month === 10 && day >= 24) || (month === 11 && day <= 21)) {
     return zodiacSigns + " " + Method;
 } 
 else if ((month === 11 && day >= 22) || (month === 12 && day <= 21)) {
-    let zodiacSigns = "Sagiattarius";
+    let zodiacSigns = "Sagittarius";
     Method = "Espresso";
     return zodiacSigns + " " + Method;
 } 

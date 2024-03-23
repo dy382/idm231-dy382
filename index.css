@@ -1,13 +1,13 @@
 body {
 
     color: #36454F;
-    background-image: url("idm231-images/brick-wall-painted-white.jpg");
-    background-size: 50%;
+    background-color: #ECECE7;
+    /* background-image: url("idm231-images/brick-wall-painted-white.jpg");
+    background-size: 50%; */
 }
 
 * {
 box-sizing: border-box;
-
 }
 
 .words {
