@@ -51,7 +51,7 @@ box-sizing: border-box;
     position: fixed;
     top: 215px;
     left: 140px;
-    background-image: url("idm231-images/wood.jpg");
+    background-color: #885638;
     /* filter: drop-shadow(0 2px 4px #31343a); */
     
 }
@@ -62,7 +62,7 @@ box-sizing: border-box;
     position: fixed;
     top: 430px;
     left: 140px;
-    background-image: url("idm231-images/wood.jpg");
+    background-color: #885638;
 }
 
 .box3 {
@@ -71,7 +71,7 @@ box-sizing: border-box;
     position: fixed;
     top: 645px;
     left: 300px;
-    background-image: url("idm231-images/wood.jpg");
+    background-color: #885638;
 }
 
 .Methods .shelf1 {
@@ -121,4 +121,35 @@ box-sizing: border-box;
 
     &:hover { cursor: pointer; background-image: lighten(10%);
     }
+
+}
+
+#helpButton img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+}
+
+#helpButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: transparent;
+    border: none;
+    width: 7rem;
+    height: 7rem;
+}
+
+#helpButton:hover {
+    opacity: 0.7;
+}
+
+#helpMessage {
+    display: none;
+    padding: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 150px;
+    z-index: 999;
 }
